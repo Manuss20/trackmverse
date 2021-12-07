@@ -1,0 +1,16 @@
+version: "3.7"
+
+networks:
+    trackmverse.services.network:
+        driver: bridge
+
+services:    
+    trackmverse.web.webspa:
+        container_name: trackmverse.WebSPA
+        build:
+          context: ../
+          dockerfile: ./build/trackmverse.WebSPA.Dockerfile 
+        ports:
+            - "8001:80"
+        networks:
+            - trackmverse.services.network
