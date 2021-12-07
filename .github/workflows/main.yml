@@ -21,7 +21,7 @@ jobs:
             username: ${{ secrets.REGISTRY_USERNAME }}
             password: ${{ secrets.REGISTRY_PASSWORD }}
         - run: |
-            docker build -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/trackmverse:${{ github.sha }} -f ./trackmverse.WebSPA.Dockerfile ../ 
+            docker build -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/trackmverse:${{ github.sha }} -f ./build/trackmverse.WebSPA.Dockerfile ./ 
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/trackmverse:${{ github.sha }}
 
         - name: 'Deploy to Azure Container Instances'
