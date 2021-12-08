@@ -1,7 +1,7 @@
 # Commons
 variable "location" {
   description = "(Required) Location of the all services to be created"
-  default="westeurope"
+  default="westus"
 }
 
 variable "resource_group_name" {
@@ -152,5 +152,36 @@ variable "cr_admin_enabled"{
   default = false
 }
 
+#Azure App Service Plan
+variable "plan_name"{
+  description = "(Required) Name of Azure App Service Plan"
+  default = "trackmverse"
+}
+
+variable "plan_kind"{
+  description = "(Required) Kind of Azure App Service Plan"
+  default = "Linux"
+}
+
+variable "plan_reserved"{
+  description = "(Required) Reserved instance of Azure App Service Plan"
+  default = true
+}
+
+variable "plan_sku_tier"{
+  description = "(Required) SKU Tier of Azure App Service Plan"
+  default = "Basic"
+}
+
+variable "plan_sku_size"{
+  description = "(Required) SKU Size of Azure App Service Plan"
+  default = "B1"
+}
+
+#Azure App Service
+variable "as_name" {
+  description = "(Required) Name of Azure App Service"
+  default = "trackmverse"
+}
 
 
