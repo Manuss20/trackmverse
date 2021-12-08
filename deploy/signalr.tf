@@ -5,7 +5,9 @@ resource "azurerm_signalr_service" "example" {
   resource_group_name = azurerm_resource_group.rg.name
 
   sku {
-    name     = var.signalr_sku
-    capacity = var.signalr_sku_capacity
+    name              = var.signalr_sku
+    capacity          = var.signalr_sku_capacity
   }
+
+  tags                = var.tags
 }

@@ -11,7 +11,7 @@ variable "resource_group_name" {
 
 variable "tags" {
   description = "(Required) Tags to be applied to the all services to be created"
-  default = { Project = "trackmverse" }
+  default = { Project = "trackmverse", Department = "trackmverse I+D+i", Owner="Manuel Sánchez" }
 }
 
 # Storage Account
@@ -134,3 +134,23 @@ variable "iot_hub_endpoint_type"{
   description = "(Required) Endpoint Type IoT Hub instance"
   default = "AzureIotHub.StorageContainer"
 }
+
+#Azure Container Registry
+
+variable "cr_name"{
+  description = "(Required) Name of Azure Container Registry"
+  default = "trackmverse"
+}
+
+variable "cr_sku"{
+  description = "(Required) Sku of Azure Container Registry"
+  default = "Premium"
+}
+
+variable "cr_admin_enabled"{
+  description = "(Required) Admin enabled of Azure Container Registry"
+  default = false
+}
+
+
+

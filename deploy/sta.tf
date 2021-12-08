@@ -6,6 +6,7 @@ resource "azurerm_storage_account" "sta" {
   account_tier              = var.sku-sta
   account_replication_type  = var.replication-type-sta
   enable_https_traffic_only = var.http-traffic-only-sta
+  tags                      = var.tags
 }
 
 resource "azurerm_storage_container" "sta_container" {
