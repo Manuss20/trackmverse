@@ -8,6 +8,4 @@ resource "azurerm_signalr_service" "example" {
     name              = var.signalr_sku
     capacity          = var.signalr_sku_capacity
   }
-
-  tags                = var.tags
 }
