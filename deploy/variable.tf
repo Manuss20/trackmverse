@@ -184,4 +184,9 @@ variable "as_name" {
   default = "trackmverse"
 }
 
+variable "SubscriptionID" {
+  description = "Your subscription Id"
+  default     = "Your subscription Id"
+}
+
 
